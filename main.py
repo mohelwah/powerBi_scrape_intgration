@@ -12,11 +12,11 @@ driver = webdriver.Chrome(executable_path=executable_path)
 driver.get("https://www.realestate.moj.gov.kw/live/Moj_Rs_11.aspx")
 
 
-def small_sleep(low=1, high=10):
+def small_sleep(low=1, high=5):
     sleep(randint(low, high))
 
 
-def large_sleep(low=1, high=20):
+def large_sleep(low=1, high=10):
     sleep(randint(low, high))
 
 
@@ -87,8 +87,9 @@ source = get_beautiful_soup(driver)
 
 
 data = []
-for page_number in range(3):
-    driver.execute_script(f"document.getElementsByTagName('a')[{page_number}].click()")
+for page_number in range(1,3):
+    driver.find_element(By.LINK_TEXT, str(page_number+1)).click()
+    #driver.execute_script(f"document.getElementsByTagName('a')[{page_number}].click()")
     large_sleep()
     get_table_data(driver)
 
