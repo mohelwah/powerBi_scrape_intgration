@@ -171,5 +171,5 @@ for page_number in range(3):
 
 df = pd.DataFrame(data=data)
 df_master = pd.read_csv("data/data-5-1-2023-23-1-2023.csv")
-df_master = df_master.append(df)
+df_master = df_master.append(df, ignore_index=True)
 df_master.to_csv(f"data/master-data.csv")
