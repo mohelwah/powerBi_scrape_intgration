@@ -1,8 +1,7 @@
 name: scrap3
 
-on:
-  schedule:
-    - cron: '*/3 * * * *' #
+on: [push]
+
 
 jobs:
   build:
