@@ -1,3 +1,6 @@
 https://exceleratorbi.com.au/keeping-track-of-changes-on-a-website-power-bi/
 https://exceleratorbi.com.au/power-bi-personal-gateway-explained/
 
+
+https://community.powerbi.com/t5/Service/PowerBI-Service-with-Python-as-Data-source/m-p/899406
+

@@ -7,8 +7,35 @@ from time import sleep
 from random import randint
 import pandas as pd
 
-executable_path = "C:\webdriver\chromedriver.exe"
-driver = webdriver.Chrome(executable_path=executable_path)
+
+## this for github mode
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+import chromedriver_autoinstaller
+from pyvirtualdisplay import Display
+
+display = Display(visible=0, size=(800, 800))
+display.start()
+chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+chrome_options = webdriver.ChromeOptions()
+options = [
+    # Define window size here
+    "--window-size=1200,1200",
+    "--ignore-certificate-errors",
+]
+for option in options:
+    chrome_options.add_argument(option)
+driver = webdriver.Chrome(options=chrome_options)
+
+
+# executable_path = "C:\webdriver\chromedriver.exe"
+# driver = webdriver.Chrome(executable_path=executable_path)
 driver.get("https://www.realestate.moj.gov.kw/live/Moj_Rs_11.aspx")
 
 
@@ -87,9 +114,9 @@ source = get_beautiful_soup(driver)
 
 
 data = []
-for page_number in range(1,3):
-    driver.find_element(By.LINK_TEXT, str(page_number+1)).click()
-    #driver.execute_script(f"document.getElementsByTagName('a')[{page_number}].click()")
+for page_number in range(1, 3):
+    driver.find_element(By.LINK_TEXT, str(page_number + 1)).click()
+    # driver.execute_script(f"document.getElementsByTagName('a')[{page_number}].click()")
     large_sleep()
     get_table_data(driver)
 
