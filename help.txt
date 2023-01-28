@@ -3,3 +3,4 @@ https://exceleratorbi.com.au/power-bi-personal-gateway-explained/
 
 
 https://community.powerbi.com/t5/Service/PowerBI-Service-with-Python-as-Data-source/m-p/899406
+https://github.com/HackZurichDreamTeam/scraping-repo
