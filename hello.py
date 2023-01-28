@@ -1,8 +1,5 @@
-def add(x, y):
-    """This is a function that adds two numbers"""
-    return x + y
+import pandas as pd
 
-
-X = 1
-Y = 2
-print(f"this is the sum of {X}, {Y}: {add(X,Y)}")
+mast_df_link = 'https://raw.githubusercontent.com/mohelwah/powerBi_scrape_intgration/main/data/data-5-1-2023-23-1-2023.csv'
+df  = pd.read_csv(mast_df_link)
+df.head()
