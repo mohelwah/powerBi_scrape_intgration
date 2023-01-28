@@ -171,4 +171,4 @@ for page_number in range(1, 3):
 
 df = pd.DataFrame(data=data)
 
-df.to_csv(f"data\data-{from_date}-{to_date}.csv")
+df.to_csv(f"data/data-{from_date}-{to_date}.csv")
