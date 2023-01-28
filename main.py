@@ -164,7 +164,7 @@ source = get_beautiful_soup(driver)
 
 data = []
 for page_number in range(1, 3):
-    driver.find_element(By.LINK_TEXT, str(page_number + 1)).click()
+    driver.find_element(By.LINK_TEXT, str(page_number)).click()
     # driver.execute_script(f"document.getElementsByTagName('a')[{page_number}].click()")
     large_sleep()
     get_table_data(driver)
