@@ -10,3 +10,4 @@ bs4==0.0.1
 PyVirtualDisplay==3.0
 webdriver-manager==3.8.5
 chromedriver-autoinstaller==0.4.0
+xlrd=2.0.1
